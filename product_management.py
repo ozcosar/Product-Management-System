@@ -252,30 +252,7 @@ def search(num,name):
     
     except UnboundLocalError:
         messagebox.showerror("Error","There is no such record")
-def create(name,num):
-    """
-    try:
-        str(name)
-        int(num)
-        # search the database for given customer id and customer name
-        sql_find = "SELECT COUNT(*) FROM customer_service WHERE cid = %s OR cName = %s"
-        find_customer = (num,name)
-        mycursor.execute(sql_find,find_customer)
-        result = mycursor.fetchone() # it is return 1 or 0 
-        if result[0] == 0: # given customer name and customer id not in the database 
-            entry_create_id.delete(0,tk.END)
-            entry_create_name.delete(0,tk.END)
-            sql = "INSERT INTO customer_service (cid,cName) VALUES (%s,%s)"
-            mycursor.execute(sql,(num,name))
-            mydb.commit()
-            #instructions(name,num) #all attributes are put database in the save function
-
-        else: #if it is in the database throw a warning 
-            warning_str = name + " " + str(num) + " " + " has already in the database"
-            messagebox.showwarning("Warning",warning_str)
-    except ValueError:
-        messagebox.showerror("Error", "Wrong Input Format")
-    """
+        
 def newProduct(name,num,pname):
     try:
         str(name)
