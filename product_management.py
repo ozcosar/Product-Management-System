@@ -16,7 +16,7 @@ x = int((screen_width / 2) - (app_width / 2))
 y = int((screen_height / 2) - (app_height / 2))
 root.geometry(f'{app_width}x{app_height}+{x}+{y}')
 
-mydb = mysql.connector.connect(host="localhost",user="root",database="apremen")
+mydb = mysql.connector.connect(host="localhost",user="root",database="dbname")
 mycursor = mydb.cursor()
 
 ctr_left = tk.Frame(root, width=225, height=190)
